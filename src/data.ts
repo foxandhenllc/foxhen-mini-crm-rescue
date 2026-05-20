@@ -1,12 +1,44 @@
-export const sample = {
+export type ItemStatus = "backlog" | "active" | "blocked" | "ready" | "done";
+
+export type WorkItem = {
+  id: string;
+  title: string;
+  category: string;
+  owner: string;
+  status: ItemStatus;
+  priority: number;
+  effort: number;
+  friction: number;
+  value: number;
+  due: string;
+  notes: string;
+};
+
+export type QualityCheck = {
+  id: string;
+  label: string;
+  passed: boolean;
+  weight: number;
+};
+
+export const sample: {
+  repoName: string;
+  title: string;
+  subtitle: string;
+  serviceLine: string;
+  description: string;
+  repositoryUrl: string;
+  liveDemoUrl: string;
+  theme: { accent: string; accent2: string; ink: string; soft: string; warm: string };
+  items: WorkItem[];
+  checks: QualityCheck[];
+  deliverables: string[];
+} = {
   "repoName": "foxhen-mini-crm-rescue",
   "title": "Mini CRM Rescue",
-  "subtitle": "Lead cleanup and pipeline clarity",
+  "subtitle": "pipeline cleanup",
   "serviceLine": "CRM cleanup sprint",
-  "heroTitle": "Rescue a messy lead list before revenue leaks out.",
-  "heroCopy": "A fictional CRM cleanup console that deduplicates leads, scores next actions, highlights stale deals, and prepares a clean follow-up pipeline.",
-  "primaryAction": "Clean pipeline",
-  "secondaryAction": "Review duplicates",
+  "description": "Deduplicate sample leads, score follow-up urgency, route owners, and export a cleaner pipeline.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-mini-crm-rescue",
   "liveDemoUrl": "https://foxhen-mini-crm-rescue.vercel.app",
   "theme": {
@@ -14,115 +46,124 @@ export const sample = {
     "accent2": "#f08a58",
     "ink": "#071426",
     "soft": "#edf4fc",
-    "warm": "#ffe9dc",
-    "surface": "#fffaf4",
-    "muted": "#5c667a",
-    "border": "rgba(7, 18, 31, 0.12)"
+    "warm": "#ffe9dc"
   },
-  "metrics": [
+  "items": [
     {
-      "label": "Duplicate clusters",
-      "value": "9",
-      "note": "merged preview"
-    },
-    {
-      "label": "Follow-up priority",
-      "value": "31",
-      "note": "ranked leads"
-    },
-    {
-      "label": "Stale deals",
-      "value": "6",
-      "note": "needs owner"
-    }
-  ],
-  "stages": [
-    {
-      "label": "Import",
-      "detail": "Normalize source, segment, value, owner, and last-touch fields.",
-      "status": "ready",
-      "owner": "Ops",
-      "index": 1
-    },
-    {
-      "label": "Clean",
-      "detail": "Flag duplicate people, conflicting companies, and missing next actions.",
-      "status": "active",
-      "owner": "Studio",
-      "index": 2
-    },
-    {
-      "label": "Prioritize",
-      "detail": "Rank the pipeline by urgency, fit, and probability of a fast next step.",
-      "status": "waiting",
-      "owner": "Sales",
-      "index": 3
-    },
-    {
-      "label": "Handoff",
-      "detail": "Prepare clean CSV, owner checklist, and follow-up notes.",
-      "status": "queued",
-      "owner": "F&H",
-      "index": 4
-    }
-  ],
-  "workItems": [
-    {
+      "id": "min-1",
       "title": "Lead merge",
-      "detail": "Resolve duplicate rows across sources",
-      "status": "ready"
+      "category": "Intake",
+      "owner": "Chris",
+      "status": "active",
+      "priority": 5,
+      "effort": 2,
+      "friction": 1,
+      "value": 5,
+      "due": "Today",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
     },
     {
-      "title": "Owner field",
-      "detail": "Assign unclaimed opportunities",
-      "status": "active"
+      "id": "min-2",
+      "title": "Dormant deal",
+      "category": "Build",
+      "owner": "Fox & Hen",
+      "status": "backlog",
+      "priority": 4,
+      "effort": 4,
+      "friction": 2,
+      "value": 4,
+      "due": "24h",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
     },
     {
-      "title": "Dormant deals",
-      "detail": "Waiting on status call",
-      "status": "waiting"
+      "id": "min-3",
+      "title": "Owner gap",
+      "category": "Review",
+      "owner": "Buyer",
+      "status": "blocked",
+      "priority": 3,
+      "effort": 3,
+      "friction": 4,
+      "value": 4,
+      "due": "48h",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
     },
     {
+      "id": "min-4",
+      "title": "Follow-up task",
+      "category": "Export",
+      "owner": "Automation",
+      "status": "ready",
+      "priority": 4,
+      "effort": 2,
+      "friction": 2,
+      "value": 3,
+      "due": "This week",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
+    },
+    {
+      "id": "min-5",
+      "title": "Segment fix",
+      "category": "Intake",
+      "owner": "QA",
+      "status": "backlog",
+      "priority": 2,
+      "effort": 1,
+      "friction": 1,
+      "value": 3,
+      "due": "Waiting",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
+    },
+    {
+      "id": "min-6",
       "title": "Export pack",
-      "detail": "Queued after merge approval",
-      "status": "queued"
+      "category": "Build",
+      "owner": "Chris",
+      "status": "done",
+      "priority": 5,
+      "effort": 5,
+      "friction": 3,
+      "value": 5,
+      "due": "Next pass",
+      "notes": "Sample pipeline cleanup work item for crm cleanup sprint."
+    }
+  ],
+  "checks": [
+    {
+      "id": "payer",
+      "label": "Payer or owner is clear",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "deliverable",
+      "label": "Deliverable has acceptance criteria",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "friction",
+      "label": "Account/access friction is documented",
+      "passed": false,
+      "weight": 14
+    },
+    {
+      "id": "handoff",
+      "label": "Handoff package is generated",
+      "passed": false,
+      "weight": 16
+    },
+    {
+      "id": "reuse",
+      "label": "Repeatable pipeline note exists",
+      "passed": true,
+      "weight": 12
     }
   ],
   "deliverables": [
-    {
-      "title": "Cleanup report",
-      "detail": "Before-after field health, duplicate count, and unresolved decisions."
-    },
-    {
-      "title": "Priority board",
-      "detail": "Lead ranking that makes next outreach obvious."
-    },
-    {
-      "title": "Export package",
-      "detail": "Clean sample CSV plus notes on rules used."
-    }
-  ],
-  "timeline": [
-    {
-      "time": "0-2 hrs",
-      "detail": "Audit lead fields and duplicates"
-    },
-    {
-      "time": "2-10 hrs",
-      "detail": "Normalize data and score follow-ups"
-    },
-    {
-      "time": "10-18 hrs",
-      "detail": "Package exports and owner notes"
-    }
-  ],
-  "proof": [
-    "Strong fit for short CRM/data cleanup contracts.",
-    "Shows measurable improvement without needing live CRM access.",
-    "Keeps every row fictional and safe to publish."
+    "Ranked board",
+    "Editable item inspector",
+    "Readiness checklist",
+    "Exportable handoff report"
   ]
-} as const;
-
-export type StageStatus = "ready" | "active" | "waiting" | "queued";
-export type DemoStage = (typeof sample.stages)[number];
-export type WorkItem = (typeof sample.workItems)[number];
+};
