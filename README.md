@@ -9,6 +9,10 @@ Public Fox & Hen working sample for a **CRM cleanup sprint**.
 - Demo: [https://foxhen-mini-crm-rescue.vercel.app](https://foxhen-mini-crm-rescue.vercel.app)
 - Repository: [https://github.com/foxandhenllc/foxhen-mini-crm-rescue](https://github.com/foxandhenllc/foxhen-mini-crm-rescue)
 
+## Purpose
+
+Mini CRM cleanup app for deduping leads, flagging missing fields, prioritizing follow-up, and exporting clean records.
+
 ## What This Demo Is
 
 Mini CRM Rescue is a forkable React/Vite operating tool for teams that want to deduplicate leads, expose owner gaps, prioritize follow-up, and package a cleaner pipeline for handoff. It is intentionally small, static, and public-safe so you can copy the pattern without inheriting a backend or vendor lock-in.
