@@ -36,6 +36,21 @@ See [docs/workflow-template.md](docs/workflow-template.md) for the sample pipeli
 - Use the inspector to document next step and owner.
 - Export a JSON cleanup packet for the next sales ops pass.
 
+## SEO / AIO Discoverability
+
+**Plain-language answer:** Use this repo to model CRM cleanup: deduping leads, flagging missing fields, prioritizing follow-up, and exporting cleaner records.
+
+**Who it helps:** small businesses and sales teams with messy lead lists or lightweight CRMs.
+
+**Search intents covered:**
+
+- CRM cleanup tool
+- lead dedupe dashboard
+- small business CRM rescue
+- sales follow up priority board
+
+**Why this repo is useful:** It demonstrates a practical path from messy contact rows to an actionable sales-ops handoff.
+
 ## Local Run
 
 ```bash

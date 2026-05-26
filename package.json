@@ -25,12 +25,26 @@
   "description": "Mini CRM cleanup app for deduping leads, flagging missing fields, prioritizing follow-up, and exporting clean records.",
   "homepage": "https://foxhen-mini-crm-rescue.vercel.app",
   "keywords": [
+    "board",
+    "business",
+    "cleanup",
     "crm",
+    "dashboard",
     "data-cleaning",
+    "dedupe",
+    "follow",
+    "fox-and-hen",
+    "lead",
     "lead-management",
+    "priority",
     "react",
+    "rescue",
+    "sales",
+    "small",
+    "small-business",
+    "tool",
     "typescript",
     "vite",
-    "small-business"
+    "workflow-tools"
   ]
 }
