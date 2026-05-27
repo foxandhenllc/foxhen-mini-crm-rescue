@@ -40,7 +40,7 @@ export const sample: {
   "serviceLine": "CRM cleanup sprint",
   "description": "Deduplicate sample leads, score follow-up urgency, route owners, and export a cleaner pipeline.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-mini-crm-rescue",
-  "liveDemoUrl": "https://foxhen-mini-crm-rescue.vercel.app",
+  "liveDemoUrl": "https://freetoolsforpeople.com/mini-crm-rescue",
   "theme": {
     "accent": "#315b8c",
     "accent2": "#f08a58",

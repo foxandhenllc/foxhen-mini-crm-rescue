@@ -6,7 +6,7 @@ Public Fox & Hen working sample for a **CRM cleanup sprint**.
 
 ## Live Demo
 
-- Demo: [https://foxhen-mini-crm-rescue.vercel.app](https://foxhen-mini-crm-rescue.vercel.app)
+- Demo: [https://freetoolsforpeople.com/mini-crm-rescue](https://freetoolsforpeople.com/mini-crm-rescue)
 - Repository: [https://github.com/foxandhenllc/foxhen-mini-crm-rescue](https://github.com/foxandhenllc/foxhen-mini-crm-rescue)
 
 ## Purpose

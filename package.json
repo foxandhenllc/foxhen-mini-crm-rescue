@@ -23,7 +23,7 @@
     "node": ">=20"
   },
   "description": "Mini CRM cleanup app for deduping leads, flagging missing fields, prioritizing follow-up, and exporting clean records.",
-  "homepage": "https://foxhen-mini-crm-rescue.vercel.app",
+  "homepage": "https://freetoolsforpeople.com/mini-crm-rescue",
   "keywords": [
     "board",
     "business",
