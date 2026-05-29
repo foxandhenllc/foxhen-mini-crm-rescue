@@ -1,5 +1,7 @@
 # Mini CRM Rescue
 
+[![Build](https://github.com/foxandhenllc/foxhen-mini-crm-rescue/actions/workflows/build.yml/badge.svg)](https://github.com/foxandhenllc/foxhen-mini-crm-rescue/actions/workflows/build.yml)
+
 Public Fox & Hen working sample for a **CRM cleanup sprint**.
 
 ![Demo screenshot](docs/demo-screenshot.png)
@@ -51,6 +53,13 @@ See [docs/workflow-template.md](docs/workflow-template.md) for the sample pipeli
 
 **Why this repo is useful:** It demonstrates a practical path from messy contact rows to an actionable sales-ops handoff.
 
+## Open Source Readiness
+
+- MIT licensed for reuse, remixing, and client-safe adaptation.
+- GitHub Actions build workflow runs install, typecheck, tests when present, and production build.
+- Contribution guide, roadmap, and issue templates are included for public collaboration.
+- Public-safe data policy keeps examples fictional and reviewable.
+
 ## Local Run
 
 ```bash
@@ -59,6 +68,22 @@ npm run dev
 npm run build
 ```
 
+## Validation
+
+```bash
+npm run typecheck --if-present
+npm run test --if-present
+npm run build --if-present
+```
+
 ## Public-Safe Scope
 
 This is a static React/Vite demo with fictional sample data. It includes no production data, credentials, real contacts, copied customer work, backend, auth, or external service calls.
+
+## Contributing
+
+See `CONTRIBUTING.md` for public-safe contribution rules, local validation commands, and good first contribution ideas. Roadmap items live in `ROADMAP.md`.
+
+## License
+
+MIT - see `LICENSE`.
