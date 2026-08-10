@@ -11,6 +11,7 @@ body { margin: 0; min-width: 320px; }
 button, input, textarea, select { font: inherit; }
 a { color: inherit; text-decoration: none; }
 .app-shell {
+  --accent: #315b8c; --accent-2: #f08a58; --ink: #071426; --soft: #edf4fc; --warm: #ffe9dc;
   min-height: 100vh;
   color: var(--ink);
   background:
@@ -33,6 +34,7 @@ nav { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; justify-c
 nav a { padding: .8rem 1rem; border-radius: 999px; font-weight: 900; color: #2f3b51; }
 nav .nav-button { color: white; background: var(--ink); box-shadow: 0 12px 30px rgba(7,18,31,.2); }
 main { width: min(94vw, 1380px); margin: 0 auto; }
+.hero > *, main { min-width: 0; }
 .hero { min-height: 700px; display: grid; grid-template-columns: minmax(0,1fr) minmax(420px,.72fr); gap: clamp(2rem,5vw,5rem); align-items: center; padding: 8rem 0 3rem; }
 .service-line { margin: 0 0 1rem; color: var(--accent); font-size: .8rem; font-weight: 950; letter-spacing: .18em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
@@ -111,7 +113,17 @@ input[type="range"] { accent-color: var(--accent); }
   .controls { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 720px) {
+  body { overflow-x: hidden; }
   .site-header { position: relative; top: auto; transform: none; margin-top: .8rem; border-radius: 1.5rem; align-items: flex-start; }
+  .site-header nav { display: none; }
   .hero { min-height: auto; padding-top: 3rem; }
+  h1 { font-size: clamp(2.55rem, 13vw, 4rem); overflow-wrap: anywhere; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .hero-actions > * { width: 100%; display: inline-flex; align-items: center; justify-content: center; }
+  .score-console { min-width: 0; overflow: hidden; }
+  .console-topline { align-items: flex-start; flex-direction: column; }
+  .console-topline strong { font-size: 2.75rem; }
   .metric-grid, .item-list, .controls, .slider-grid, .stage-grid, .deliverable-list { grid-template-columns: 1fr; }
 }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+button:disabled { cursor: not-allowed; opacity: .5; }

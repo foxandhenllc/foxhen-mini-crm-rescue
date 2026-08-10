@@ -32,7 +32,7 @@ This demo shows how to deduplicate leads, expose owner gaps, prioritize follow-u
 - Replace sample deals with your fictionalized CRM rows first.
 - Score priority by revenue/urgency and friction by missing data.
 - Use the inspector to document next step and owner.
-- Export a JSON cleanup packet for the next sales ops pass.
+- Export a normalized CSV for the next sales-ops pass.
 
 ## Public-Safe Data Rules
 

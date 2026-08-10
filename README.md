@@ -21,11 +21,11 @@ Mini CRM Rescue is a forkable React/Vite operating tool for teams that want to d
 
 ## Fully Working Behaviors
 
-- Search, filter, and sort a domain-specific workflow board.
-- Add a fictional item and edit owner, notes, priority, value, effort, and friction.
-- Advance status and watch readiness metrics update in real time.
-- Run a 24-hour sprint simulation to reduce friction on the highest-scoring work.
-- Toggle QA gates, generate a handoff report, and download the board as JSON.
+- Search fictional leads by name, company, or email.
+- Detect case-insensitive exact-email duplicates and merge redundant rows.
+- Rank follow-up urgency using contact age, ownership, and pipeline stage.
+- Edit owner, stage, last-contact date, and estimated value in the lead inspector.
+- Export the cleaned pipeline as a normalized CSV.
 
 ## Workflow Template
 
@@ -36,7 +36,7 @@ See [docs/workflow-template.md](docs/workflow-template.md) for the sample pipeli
 - Replace sample deals with your fictionalized CRM rows first.
 - Score priority by revenue/urgency and friction by missing data.
 - Use the inspector to document next step and owner.
-- Export a JSON cleanup packet for the next sales ops pass.
+- Export a normalized CSV for the next sales-ops pass.
 
 ## SEO / AIO Discoverability
 
